@@ -13,6 +13,7 @@ namespace quiz_backend.Controllers
 {
     [Produces("application/json")]
     [Route("api/Quizzes")]
+    //[ApiController]
     public class QuizzesController : Controller
     {
         public readonly QuizContext _context;
@@ -39,7 +40,7 @@ namespace quiz_backend.Controllers
             return _context.Quiz;
         }
 
-        // GET: api/Quizzes/5
+        // GET: api/Quizzes/
         [HttpGet("{id}")]
         public async Task<IActionResult> GetQuiz([FromRoute] int id)
         {
@@ -58,7 +59,7 @@ namespace quiz_backend.Controllers
             return Ok(quiz);
         }
 
-        // PUT: api/Quizzes/5
+        // PUT: api/Quizzes/
         [HttpPut("{id}")]
         public async Task<IActionResult> PutQuiz([FromRoute] int id, [FromBody] Quiz quiz)
         {
@@ -113,7 +114,7 @@ namespace quiz_backend.Controllers
             return CreatedAtAction("GetQuiz", new { id = quiz.ID }, quiz);
         }
 
-        // DELETE: api/Quizzes/5
+        // DELETE: api/Quizzes/
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteQuiz([FromRoute] int id)
         {

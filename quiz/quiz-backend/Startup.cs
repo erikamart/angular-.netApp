@@ -63,7 +63,7 @@ namespace quiz_backend
                };
            });
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddMvc();
         }
 
