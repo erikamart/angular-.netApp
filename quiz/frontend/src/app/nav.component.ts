@@ -4,7 +4,7 @@ import { AuthService } from './auth.service'
 @Component({
     selector: 'nav',
     template: `
-        <mat-toolbar>
+        <mat-toolbar color="primary">
             <button mat-button routerLink="/">My Quiz</button>
             <button mat-button routerLink="/play">Play</button>
             <span style="flex: 1 1 auto;"></span>

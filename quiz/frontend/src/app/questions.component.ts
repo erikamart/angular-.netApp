@@ -12,8 +12,8 @@ export class QuestionsComponent {
     questions
 
     constructor(public api: ApiService, public route: ActivatedRoute) { }
-    // ngOnInit is used to be called by angular once the component is initialized
-    // This is to help not slow up the app 
+    /* ngOnInit is used to be called by angular once the component is initialized.
+    This is to help not slow up the app */
     ngOnInit() {
         var quizId = this.route.snapshot.paramMap.get('quizId')
 

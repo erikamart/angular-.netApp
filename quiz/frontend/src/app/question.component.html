@@ -29,9 +29,10 @@
     </mat-card-content>
     <mat-card-actions>
         <!-- bind through click action instead of through submit action since button won't be in form element. -->
-        <button *ngIf="question.id" (click)="api.putQuestion(question)" mat-button>EDIT</button>
-        <button *ngIf="question.id" (click)="question = {}" mat-button>NEW</button>
-        <button *ngIf="!question.id" (click)="post(question)" mat-button>POST</button>
+        <button *ngIf="question.id" (click)="api.putQuestion(question)" mat-stroked-button color="primary">EDIT</button>
+        <button *ngIf="question.id" (click)="question = {}" mat-stroked-button color="primary">NEW</button>
+        <button *ngIf="!question.id" (click)="post(question); reloadPage()" mat-stroked-button
+            color="primary">POST</button>
     </mat-card-actions>
 </mat-card>
 <questions></questions>
