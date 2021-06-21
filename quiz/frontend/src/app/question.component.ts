@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from './api.service';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'question',
@@ -11,8 +11,8 @@ export class QuestionComponent {
     question: any = {}
     quizId
 
-    constructor(public api: ApiService, public route: ActivatedRoute) { }
-
+    constructor(public api: ApiService, public router: Router, public route: ActivatedRoute) { }
+    currentRouter = this.router.url;
     ngOnInit() {
         this.quizId = this.route.snapshot.paramMap.get('quizId')
         this.api.questionSelected.subscribe(question => this.question = question)
@@ -21,5 +21,9 @@ export class QuestionComponent {
     post(question) {
         question.quizId = this.quizId
         this.api.postQuestion(question)
+    }
+
+    reloadPage() {
+        this.router.navigate([this.currentRouter])
     }
 }

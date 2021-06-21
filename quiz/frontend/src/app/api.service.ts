@@ -49,6 +49,12 @@ export class ApiService {
         })
     }
 
+    deleteQuiz(quiz) {
+        this.http.delete(`https://localhost:5001/api/quizzes/${quiz.id}`, quiz).subscribe(res => {
+            console.log(res)
+        })
+    }
+
     selectQuestion(question) {
         this.selectedQuestion.next(question)
     }
