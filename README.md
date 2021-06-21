@@ -48,6 +48,19 @@ npm install
 Open VS Community, select to open existing project and navigate to the quiz-backend/quiz-backend.csproj file. Click Run. Take note of the URL that opens in the browser and replace the URL in the frontend/ directory files called api.service.ts and auth.service.ts to match.
 
 
+## Sources
+- https://www.linkedin.com/learning/building-applications-with-angular-asp-dot-net-core-and-entity-framework-core/welcome?u=79828372
+- https://www.red-gate.com/simple-talk/homepage/building-an-angularjs-application-with-asp-net-core/
+- https://stackoverflow.com/questions/61746688/angular-compile-error-on-missing-dependencies
+- https://stackoverflow.com/questions/66731356/ts2339-property-text-does-not-exist-on-type
+- https://stackoverflow.com/questions/48061096/why-cant-i-call-the-useinmemorydatabase-method-on-dbcontextoptionsbuilder
+- https://www.ryadel.com/en/the-command-node-node_modules-webpack-bin-webpack-js-env-prod-exited-with-code-2-error-fix-angular-node/
+- https://stackoverflow.com/questions/57626878/the-json-value-could-not-be-converted-to-system-int32
+- https://stackblitz.com/edit/angular-nqts82?file=src%2Fapp%2Fhome%2Fhome.component.html
+- https://stackoverflow.com/questions/59552387/how-to-reload-a-page-in-angular-8-the-proper-way
+- https://stackoverflow.com/questions/63277435/edit-and-delete-table-data-in-angular
+
+
 ## License
 
 MIT
